@@ -1,5 +1,5 @@
 # Data-Science-Bootcamp
-Where Data Science learning becomes easy
+
 
 Basic Plot using matplotlib
 
