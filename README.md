@@ -1,4 +1,4 @@
-# Data-Science-Bootcamp
+# Coding Notes
 
 
 Basic Plot using matplotlib
