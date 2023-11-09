@@ -1,4 +1,3 @@
-```markdown
 # Coding Notes
 
 ## Basic Plot using matplotlib
@@ -40,8 +39,3 @@ It refers to the extraction of useful information from raw data. Another term fo
 ## Digital Ads and CTR
 
 Digital ads are expected to have a higher CTR (Click-Through Rate) compared to traditional advertisements.
-
-```
-```
-
-Feel free to use this Markdown code in your documentation. If you have any more coding notes or questions, let me know!
