@@ -1,4 +1,4 @@
-# Data Science Foot Note
+# Data Science Footnote
 
 ## Basic Plot using matplotlib
 
