@@ -86,7 +86,7 @@ print(result)
 
 ## String Manipulation
 
-We delved into string manipulation in Python, emphasizing the immutability of strings. Example:
+We delved into string manipulation in Python, emphasizing the immutability of strings. For example:
 
 ```python
 planet = "Earth"
