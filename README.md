@@ -184,3 +184,96 @@ Use `for` loops to iterate over keys, values, or both using `dict.items()`.
 for planet, initial in planet_to_initial.items():
     print("{} begins with \"{}\"".format(planet.rjust(10), initial))
 ```
+
+## Imports
+
+In this tutorial, we will cover the concept of imports in Python, provide tips for working with unfamiliar libraries, and explore operator overloading.
+
+### Imports in Python
+
+Python offers a wide range of built-in types and functions. However, one of Python's strengths, particularly for data scientists, is the extensive collection of high-quality custom libraries. These libraries enhance Python's functionality and cover various domains.
+
+To access code from these libraries, we use imports. Let's start with a simple example, importing the `math` module from the standard library:
+
+```python
+import math
+
+print("It's math! It has type {}".format(type(math)))
+```
+
+This imports the `math` module, which is a collection of variables and functions. We can explore its contents using `dir(math)`.
+
+```python
+print(dir(math))
+```
+
+The `math` module contains various functions and constants like `pi`. We can access these using dot syntax:
+
+```python
+print("pi to 4 significant digits = {:.4}".format(math.pi))
+```
+
+### Import Syntax Variations
+
+We can use different import syntax variations based on our needs. For instance, if we frequently use a module, we can import it with a shorter alias:
+
+```python
+import math as mt
+print(mt.pi)
+```
+
+Or, for brevity, we can import all variables directly:
+
+```python
+from math import *
+print(pi, log(32, 2))
+```
+
+However, this approach may lead to naming conflicts, especially when importing from multiple libraries.
+
+### Submodules
+
+Modules can also contain variables referring to other modules, creating submodules. For example, the `numpy` module has a submodule named `random`:
+
+```python
+import numpy
+print("numpy.random is a", type(numpy.random))
+```
+
+If we import `numpy` in this way, calling a function in the `random` submodule requires two dots:
+
+```python
+rolls = numpy.random.randint(low=1, high=6, size=10)
+```
+
+### Operator Overloading
+
+Python allows operator overloading, enabling objects of a custom type to behave with operators differently. For example, adding a number to a list is not allowed:
+
+```python
+# This will raise a TypeError
+[3, 4, 1, 2, 2, 1] + 10
+```
+
+However, with NumPy arrays, the behavior is different:
+
+```python
+rolls + 10
+```
+
+Understanding operator overloading is crucial when working with libraries like NumPy, TensorFlow, or Pandas, as they may redefine operators for their types.
+
+### Tools for Understanding Objects
+
+When working with unfamiliar objects, three essential tools are `type()`, `dir()`, and `help()`:
+
+```python
+# Example with a NumPy array
+rolls = numpy.random.randint(low=1, high=6, size=10)
+print(type(rolls))
+print(dir(rolls))
+print(help(rolls.ravel))
+```
+
+These tools help reveal the type, attributes, and documentation of an object, aiding in better understanding and usage.
+
