@@ -305,6 +305,4 @@ print(dir(list))
 
 Python's official documentation elaborates on these special "underscores" methods, providing a comprehensive guide for those venturing into type definition.
 
-## Embrace the Challenge
 
-Embark on the final coding exercise to reinforce your grasp of imports, tackle unfamiliar objects, and navigate the complexities of operator overloading. Need guidance or eager to share insights? Join the course discussion forum and connect with fellow learners. Happy coding!
