@@ -94,5 +94,93 @@ planet = "B" + planet[1:]  # Modifying the first character
 planet += " and Mars"  # Appending to the string
 ```
 
+# Python Strings and Dictionaries Overview
 
+This lesson covers two fundamental Python types: strings and dictionaries.
 
+## Strings
+
+Strings in Python are versatile for manipulation, particularly in the context of data science work. Key concepts include:
+
+### String Syntax
+
+Strings can be defined with either single or double quotations. Double quotes are useful when the string contains a single quote character.
+
+```python
+x = 'Pluto is a planet'
+y = "Pluto is a planet"
+x == y  # Evaluates to True
+```
+
+### Escaping Characters
+
+To include a single quote inside a single-quoted string, use the backslash character for escaping.
+
+```python
+'Pluto\'s a planet!'
+```
+
+### String Methods
+
+Python provides various string methods for manipulation:
+
+```python
+claim = "Pluto is a planet!"
+claim.upper()  # 'PLUTO IS A PLANET!'
+claim.lower()  # 'pluto is a planet!'
+claim.index('plan')  # 11
+claim.startswith('Pluto')  # True
+claim.endswith('planet')  # False
+```
+
+### Going Between Strings and Lists
+
+Use `str.split()` to convert a string into a list of smaller strings, and `str.join()` to concatenate a list of strings into one string.
+
+```python
+words = claim.split()
+'/'.join(words)  # 'Pluto/is/a/planet!'
+```
+
+### String Formatting with `.format()`
+
+The `.format()` method is a powerful way to concatenate strings with placeholders.
+
+```python
+position = 9
+"{}, you'll always be the {}th planet to me.".format(planet, position)
+```
+
+## Dictionaries
+
+Dictionaries are a built-in data structure in Python for mapping keys to values.
+
+```python
+numbers = {'one': 1, 'two': 2, 'three': 3}
+```
+
+### Dictionary Operations
+
+Access values, add new key-value pairs, and change existing values using square bracket syntax.
+
+```python
+numbers['eleven'] = 11
+numbers['one'] = 'Pluto'
+```
+
+### Dictionary Comprehensions
+
+Create dictionaries with comprehensions, similar to list comprehensions.
+
+```python
+planet_to_initial = {planet: planet[0] for planet in planets}
+```
+
+### Iterating Over Dictionaries
+
+Use `for` loops to iterate over keys, values, or both using `dict.items()`.
+
+```python
+for planet, initial in planet_to_initial.items():
+    print("{} begins with \"{}\"".format(planet.rjust(10), initial))
+```
