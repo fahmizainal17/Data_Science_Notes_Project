@@ -1,6 +1,6 @@
 # Data Science Footnote
 
-## Basic Plot using matplotlib
+## Basic Plot using matplotlib.
 
 ```python
 import matplotlib.pyplot as plt
