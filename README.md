@@ -1,4 +1,4 @@
-# Data Science Notes
+# Data Science Notes Project
 
 ## Basic Plot using matplotlib.
 
